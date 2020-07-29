@@ -9,10 +9,7 @@ const controller = require('./controller/controller')
 dotenv.config();
 
 app.use(cors())
-app.use(express.urlencoded({
-  extended: false
-}))
-// parse application/json
+app.use(express.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 app.get('/api/users', controller.ListesUsers);

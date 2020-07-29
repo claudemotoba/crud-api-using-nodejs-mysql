@@ -20,12 +20,12 @@ exports.ajouter = async (user) => {
     }
 }
 
-// exports.unEmploye = async (id) => {
-//   try {
-//     const result = await connexion.query(`select users.id as id, users.prenom as prenom, users.nom as nom, users.email as email, users.tel as tel, users.id_postes as id_postes, users.pays as pays, users.id_statut as id_statut from users where users.id = ?`, [parseInt(id)]);
+exports.unEmploye = async (id) => {
+  try {
+    const result = await connexion.query(`select users.id as id, users.prenom as prenom, users.nom as nom, users.email as email, users.tel as tel, users.id_postes as id_postes, users.pays as pays, users.id_statut as id_statut from users where users.id = ?`, [parseInt(id)]);
       
-//     return result
-//   } catch (error) {
-//       throw error
-//   }
-// }
+    return result
+  } catch (error) {
+      throw error
+  }
+}
